@@ -4,6 +4,8 @@ Jquery wavify is a simple jquery plugin heavily adapted from a codepen board (ht
 
 A playground can be accessed here : http://codepen.io/peacepostman/pen/jBavvN/
 
+You can also see it in production here : https://potion.social/fr/plans-entreprise
+
 ## Usage
 
 Usage is very simple. First, be sure to include Jquery (https://jquery.com/) and TweenMax (https://greensock.com/tweenmax) in order to be sure that all dependencies are loaded.
