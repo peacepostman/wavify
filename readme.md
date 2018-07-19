@@ -28,7 +28,9 @@ or
 ```
 
 In the html add the following code:
-`<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>`
+```
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>
+```
 
 Then in your JavaScript file add this:
 ```
