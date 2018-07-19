@@ -136,7 +136,7 @@ function wavify( wave_element, options ) {
 	//  Redraw for resize with debounce
 	//
 	var redraw = debounce(function() {
-		wave.attr('d', '');
+		wave.setAttribute('d', '');
 		points = [];
 		totalTime = 0;
 		width = document.querySelector(settings.container).getBoundingClientRect().width;
