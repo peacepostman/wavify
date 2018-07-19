@@ -91,6 +91,8 @@ function wavify( wave_element, options ) {
 	//
 
 	function draw( now ) {
+		if( "undefined" === typeof now )
+			now = performance.now()
 
 		if (lastUpdate) {
 			var elapsed = (now-lastUpdate) / 1000;
