@@ -3,7 +3,7 @@
 *   JavaScript library to make some nice waves
 *   by peacepostman @ crezeo
  */
-let wave_instances = {}
+let wave_instances = {};
 function wavify( wave_element, options ) {
 
 	if( 'undefined' === typeof options )
@@ -27,7 +27,7 @@ function wavify( wave_element, options ) {
 	}, options );
 
 	var wave = wave_element,
-        instance_indentifier = performance.now(), // Reference the current system time as a configuration identifier for updating options
+		instance_indentifier = performance.now(), // Reference the current system time as a configuration identifier for updating options
 		width = document.querySelector(settings.container).getBoundingClientRect().width,
 		height = document.querySelector(settings.container).getBoundingClientRect().height,
 		points = [],
@@ -35,7 +35,7 @@ function wavify( wave_element, options ) {
 		totalTime = 0;
 
 	// Store the instance identifier for this element outside the scope of this function
-    wave_instances[ wave_element.id ] = instance_indentifier
+	wave_instances[ wave_element.id ] = instance_indentifier
 
 	//  Set color
 	//
