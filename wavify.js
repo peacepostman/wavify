@@ -10,7 +10,7 @@
         //  Options
         //
         //
-        var settings = $.extend({
+        var settings = Object.assign({}, {
             container: options.container ? options.container : 'body',
             // Height of wave
             height: 200,
