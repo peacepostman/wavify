@@ -83,8 +83,8 @@ function wavify( wave_element, options ) {
     //  Draw function
     //
     //
-    function draw() {
-        var now = window.Date.now();
+
+	function draw( now ) {
 
         if (lastUpdate) {
             var elapsed = (now-lastUpdate) / 1000;
