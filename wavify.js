@@ -25,8 +25,8 @@
         }, options );
 
         var wave = this,
-            width = $(settings.container).width(),
-            height = $(settings.container).height(),
+            width = document.querySelector(settings.container).getBoundingClientRect().width,
+            height = document.querySelector(settings.container).getBoundingClientRect().height,
             points = [],
             lastUpdate,
             totalTime = 0;
@@ -129,8 +129,8 @@
             wave.attr('d', '');
             points = [];
             totalTime = 0;
-            width = $(settings.container).width();
-            height = $(settings.container).height();
+            width = document.querySelector(settings.container).getBoundingClientRect().width;
+            height = document.querySelector(settings.container).getBoundingClientRect().height;
             lastUpdate = false;
             setTimeout(function(){
                 draw();
