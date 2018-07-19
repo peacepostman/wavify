@@ -61,5 +61,5 @@ $('#myID').wavify({
 |color| CSS color for the wave | rgba(255,255,255, 0.20) |
 |bones| Number of articulations in the wave | 3 |
 |speed| Animation speed | 0.15 |
-|height| Height of the wave from crest to trough | 200 |
+|height| Height of the wave from the bottom of its parent container | 200 |
 |amplitude| Vertical distance wave travels | 100 |
