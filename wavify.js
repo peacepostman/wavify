@@ -136,7 +136,7 @@
                 draw();
             }, 50);
         }, 250);
-        $(window).on('resize', redraw);
+        window.addEventListener('resize', redraw)
 
 
         //  Execute
