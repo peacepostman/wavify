@@ -44,7 +44,7 @@ Then in your JavaScript file add this:
 
 ```
 // For Vanilla JavaScript
-wavify( document.querySelect('#myId'), {
+var myWave = wavify( document.querySelect('#myId'), {
   height: 60,
   bones: 3,
   amplitude: 40,
@@ -53,7 +53,7 @@ wavify( document.querySelect('#myId'), {
 })
 
 // For jQuery
-$('#myID').wavify({
+var myWave = $('#myID').wavify({
   height: 60,
   bones: 3,
   amplitude: 40,
@@ -72,6 +72,50 @@ $('#myID').wavify({
 | speed      | Animation speed                                                             | 0.15                    |
 | height     | Height of the wave from crest to trough                                     | 200                     |
 | amplitude  | Vertical distance wave travels                                              | 100                     |
+
+## Available Functions
+
+**pause**
+
+Will pause current running animation
+
+```
+myWave.pause();
+```
+
+**play**
+
+Will play current running animation if paused before
+
+```
+myWave.play();
+```
+
+**kill**
+
+Will kill current animation.
+
+```
+myWave.kill();
+```
+
+**reboot**
+
+Will reboot animation. New parameters can be provided. Please avoid changing selector, there is no logic reason to do that :D
+
+```
+myWave.reboot();
+
+OR
+
+myWave.reboot({
+  height: 80,
+  bones: 10,
+  amplitude: 60,
+  color: 'rgba(150, 97, 255, .2)',
+  speed: .45
+});
+```
 
 ## Copyright and license
 
