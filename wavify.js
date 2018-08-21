@@ -192,14 +192,13 @@ function wavify(wave_element, options) {
   }
 
   function reboot(options) {
-    if (!animationInstance) {
-      if (typeof options !== undefined) {
-        rebuilSettings(options);
-      }
-      tweenMaxInstance = TweenMax.set(wave, { attr: { fill: settings.color } });
-      play();
-      window.addEventListener("resize", redraw);
+    kill();
+    if (typeof options !== undefined) {
+      rebuilSettings(options);
     }
+    tweenMaxInstance = TweenMax.set(wave, { attr: { fill: settings.color } });
+    play();
+    window.addEventListener("resize", redraw);
   }
 
   function play() {
