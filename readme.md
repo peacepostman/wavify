@@ -81,11 +81,11 @@ Will animate wave color to a new value.
 
 Available parameters are :
 
-| **Property** | **Description**                                 | **Default Value** |
-| ------------ | :---------------------------------------------- | :---------------- |
-| timing       | Duration for transition in seconds              | 1                 |
-| color        | CSS color for the wave, can be Hex, rgb, rgba   | original color    |
-| onComplete   | A function to be executed on transtion complete | null              |
+| **Property** | **Description**                                  | **Default Value** |
+| ------------ | :----------------------------------------------- | :---------------- |
+| timing       | Duration for transition in seconds               | 1                 |
+| color        | CSS color for the wave, can be Hex, rgb, rgba    | original color    |
+| onComplete   | A function to be executed on transition complete | null              |
 
 ```
 myWave.updateColor({
