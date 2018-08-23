@@ -64,16 +64,26 @@ var myWave = $('#myID').wavify({
 
 ## Option Parameters
 
-| _Property_ | _Description_                                                               | _Default Value_         |
-| ---------- | :-------------------------------------------------------------------------- | :---------------------- |
-| container  | Element query selector for parent container; used for calculating wave size | 'body'                  |
-| color      | CSS color for the wave                                                      | rgba(255,255,255, 0.20) |
-| bones      | Number of articulations in the wave                                         | 3                       |
-| speed      | Animation speed                                                             | 0.15                    |
-| height     | Height of the wave from crest to trough                                     | 200                     |
-| amplitude  | Vertical distance wave travels                                              | 100                     |
+| **Property** | **Description**                                                             | **Default Value**       |
+| ------------ | :-------------------------------------------------------------------------- | :---------------------- |
+| container    | Element query selector for parent container; used for calculating wave size | 'body'                  |
+| color        | CSS color for the wave                                                      | rgba(255,255,255, 0.20) |
+| bones        | Number of articulations in the wave                                         | 3                       |
+| speed        | Animation speed                                                             | 0.15                    |
+| height       | Height of the wave from crest to trough                                     | 200                     |
+| amplitude    | Vertical distance wave travels                                              | 100                     |
 
 ## Available Functions
+
+**updateColor**
+
+Will animate wave color to the provided one, you can also provide a timing for the transition (Default is 1 second if not provided). Provided value is expressed in seconds.
+
+```
+myWave.updateColor('rgba(150, 97, 255, .8)');
+or
+myWave.updateColor('#FFF', 10);
+```
 
 **pause**
 
@@ -102,6 +112,8 @@ myWave.kill();
 **reboot**
 
 Will reboot animation. New parameters can be provided. Please avoid changing selector, there is no logic reason to do that :D
+
+Refer to configuration options to see available parameters
 
 ```
 myWave.reboot();
