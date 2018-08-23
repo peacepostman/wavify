@@ -39,23 +39,7 @@ function wavify(wave_element, options) {
   //  Allow new settings, avoid setting new container for logic purpose please :)
   //
   function rebuilSettings(params) {
-    settings = Object.assign(
-      {},
-      {
-        container: options.container ? options.container : "body",
-        // Height of wave
-        height: 200,
-        // Amplitude of wave
-        amplitude: 100,
-        // Animation speed
-        speed: 0.15,
-        // Total number of articulation in wave
-        bones: 3,
-        // Color
-        color: "rgba(255,255,255, 0.20)"
-      },
-      params
-    );
+    settings = Object.assign({}, settings, params);
   }
 
   function drawPoints(factor) {
@@ -212,6 +196,26 @@ function wavify(wave_element, options) {
     }
   }
 
+  function updateColor(options) {
+    if (typeof options.timing === undefined) {
+      options.timing = 1;
+    }
+    if (typeof options.color === undefined) {
+      options.color = settings.color;
+    }
+    tweenMaxInstance = TweenMax.to(wave, parseInt(options.timing), {
+      attr: { fill: options.color },
+      onComplete: function() {
+        if (
+          typeof options.onComplete !== undefined &&
+          {}.toString.call(options.onComplete) === "[object Function]"
+        ) {
+          options.onComplete();
+        }
+      }
+    });
+  }
+
   function kill() {
     if (animationInstance) {
       pause();
@@ -240,6 +244,7 @@ function wavify(wave_element, options) {
     reboot: reboot,
     play: play,
     pause: pause,
-    kill: kill
+    kill: kill,
+    updateColor: updateColor
   };
 }
