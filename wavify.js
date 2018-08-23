@@ -196,14 +196,24 @@ function wavify(wave_element, options) {
     }
   }
 
-  function updateColor(newColor, timing) {
-    if (typeof timing === undefined) {
-      timing = 1;
+  function updateColor(options) {
+    if (typeof options.timing === undefined) {
+      options.timing = 1;
     }
-    if (typeof newColor === undefined) {
-      newColor = settings.color;
+    if (typeof options.color === undefined) {
+      options.color = settings.color;
     }
-    tweenMaxInstance = TweenMax.to(wave, parseInt(timing), { attr: { fill: newColor } });
+    tweenMaxInstance = TweenMax.to(wave, parseInt(options.timing), {
+      attr: { fill: options.color },
+      onComplete: function() {
+        if (
+          typeof options.onComplete !== undefined &&
+          {}.toString.call(options.onComplete) === "[object Function]"
+        ) {
+          options.onComplete();
+        }
+      }
+    });
   }
 
   function kill() {

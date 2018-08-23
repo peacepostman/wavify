@@ -67,7 +67,7 @@ var myWave = $('#myID').wavify({
 | **Property** | **Description**                                                             | **Default Value**       |
 | ------------ | :-------------------------------------------------------------------------- | :---------------------- |
 | container    | Element query selector for parent container; used for calculating wave size | 'body'                  |
-| color        | CSS color for the wave                                                      | rgba(255,255,255, 0.20) |
+| color        | CSS color for the wave, can be Hex, rgb, rgba                               | rgba(255,255,255, 0.20) |
 | bones        | Number of articulations in the wave                                         | 3                       |
 | speed        | Animation speed                                                             | 0.15                    |
 | height       | Height of the wave from crest to trough                                     | 200                     |
@@ -77,12 +77,37 @@ var myWave = $('#myID').wavify({
 
 **updateColor**
 
-Will animate wave color to the provided one, you can also provide a timing for the transition (Default is 1 second if not provided). Provided value is expressed in seconds.
+Will animate wave color to a new value.
+
+Available parameters are :
+
+| **Property** | **Description**                                 | **Default Value** |
+| ------------ | :---------------------------------------------- | :---------------- |
+| timing       | Duration for transition in seconds              | 1                 |
+| color        | CSS color for the wave, can be Hex, rgb, rgba   | original color    |
+| onComplete   | A function to be executed on transtion complete | null              |
 
 ```
-myWave.updateColor('rgba(150, 97, 255, .8)');
+myWave.updateColor({
+  color: 'rgba(150, 97, 255, .8)'
+});
+
 or
-myWave.updateColor('#FFF', 10);
+
+myWave.updateColor({
+  color: '#FFF',
+  timing: 10
+});
+
+or
+
+myWave.updateColor({
+  color: '#FFF',
+  timing: 10,
+  onComplete: function(){
+    console.log('Transition Complete !')
+  }
+});
 ```
 
 **pause**
