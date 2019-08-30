@@ -1,5 +1,7 @@
 # Wavify
 
+[![NPM version](https://img.shields.io/npm/v/wavify)](https://npmjs.org/package/wavify)
+
 Wavify is a simple library to draw animated wave on a website.
 
 The library is heavily adapted from a codepen board (https://codepen.io/grimor/pen/qbXLdN).
@@ -11,6 +13,10 @@ A playground for jQuery can be accessed here: http://codepen.io/peacepostman/pen
 You can also see it in production here: https://potion.social/fr/plans-entreprise
 
 _Warning_: It has been notified that the use of this plugin introduce performance issues in limited setups or on some mobile devices.
+
+## Installation
+
+Clone repo or run `npm i wavify`.
 
 ## Usage
 
