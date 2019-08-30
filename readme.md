@@ -44,7 +44,7 @@ Then in your JavaScript file add this:
 
 ```
 // For Vanilla JavaScript
-var myWave = wavify( document.querySelect('#myId'), {
+var myWave = wavify( document.querySelector('#myId'), {
   height: 60,
   bones: 3,
   amplitude: 40,
