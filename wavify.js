@@ -1,7 +1,7 @@
 /*
-*   Wavify
-*   JavaScript library to make some nice waves
-*   by peacepostman @ crezeo
+ *   Wavify
+ *   JavaScript library to make some nice waves
+ *   by peacepostman @ potion
  */
 function wavify(wave_element, options) {
   if ("undefined" === typeof options) options = {};
@@ -28,8 +28,10 @@ function wavify(wave_element, options) {
   );
 
   var wave = wave_element,
-    width = document.querySelector(settings.container).getBoundingClientRect().width,
-    height = document.querySelector(settings.container).getBoundingClientRect().height,
+    width = document.querySelector(settings.container).getBoundingClientRect()
+      .width,
+    height = document.querySelector(settings.container).getBoundingClientRect()
+      .height,
     points = [],
     lastUpdate,
     totalTime = 0,
@@ -47,7 +49,8 @@ function wavify(wave_element, options) {
 
     for (var i = 0; i <= settings.bones; i++) {
       var x = (i / settings.bones) * width;
-      var sinSeed = (factor + (i + (i % settings.bones))) * settings.speed * 100;
+      var sinSeed =
+        (factor + (i + (i % settings.bones))) * settings.speed * 100;
       var sinHeight = Math.sin(sinSeed / 100) * settings.amplitude;
       var yPos = Math.sin(sinSeed / 100) * sinHeight + settings.height;
       points.push({ x: x, y: yPos });
@@ -159,8 +162,10 @@ function wavify(wave_element, options) {
     pause();
     points = [];
     totalTime = 0;
-    width = document.querySelector(settings.container).getBoundingClientRect().width;
-    height = document.querySelector(settings.container).getBoundingClientRect().height;
+    width = document.querySelector(settings.container).getBoundingClientRect()
+      .width;
+    height = document.querySelector(settings.container).getBoundingClientRect()
+      .height;
     lastUpdate = false;
     play();
   }, 250);

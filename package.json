@@ -1,12 +1,24 @@
 {
   "name": "wavify",
   "description": "Wavify is a simple library to draw animated wave on a webpage.",
-  "keywords": ["js", "jquery", "wave", "wavify", "greensock"],
+  "version": "1.0.0",
+  "main": "wavify.js",
+  "keywords": [
+    "js",
+    "jquery",
+    "wave",
+    "wavify",
+    "greensock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peacepostman/wavify.git"
+  },
   "homepage": "https://github.com/peacepostman/wavify",
   "authors": [
     {
       "name": "Benjamin Grauwin",
-      "email": "benjamin@crezeo.com"
+      "email": "benjamin@potion.social"
     }
   ],
   "support": {
