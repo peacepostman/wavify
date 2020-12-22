@@ -10,8 +10,6 @@ Wavify can be used as a jQuery plugin or with vanilla JavaScript.
 
 A playground for jQuery can be accessed here: http://codepen.io/peacepostman/pen/jBavvN/
 
-You can also see it in production here: https://potion.social/fr/plans-entreprise
-
 _Warning_: It has been notified that the use of this plugin introduce performance issues in limited setups or on some mobile devices.
 
 ## Installation
